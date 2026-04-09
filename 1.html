@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madhu Children's Hospital</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f9ff;
+        }
+
+        /* HEADER */
+        .header {
+            background: #4CAF50;
+            color: white;
+            padding: 15px;
+            position: relative;
+            text-align: center;
+        }
+
+        /* LOGO LEFT */
+        .logo {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 60px;
+            height: 60px;
+        }
+
+        /* TITLE CENTER */
+        .title h1 {
+            margin: 0;
+        }
+
+        .title p {
+            margin: 0;
+        }
+
+        /* NAVBAR */
+        nav {
+            background: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #4CAF50;
+        }
+
+        /* HERO SECTION (NORMAL IMAGE) */
+        .hero {
+            position: relative;
+            background: url('child1.jpg') no-repeat center center;
+            background-size: cover;
+
+
+            color: white;
+            text-align: left;
+            padding: 180px 40px;
+        }
+
+        /* LIGHT OVERLAY */
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        /* TEXT ABOVE IMAGE */
+        .hero * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+        }
+
+        .hero p {
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .hero button {
+            position: relative;
+            top: 100px;
+            /* moves button down */
+            font-size: 20px;
+            /* text size bigger */
+            padding: 15px 30px;
+            /* button size bigger */
+            border-radius: 8px;
+            /* smoother look */
+            margin-top: 30px;
+            /* little spacing from text */
+        }
+
+        /* SECTIONS */
+        .section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        /* CARDS */
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 250px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* CALL BOX */
+        .call-box {
+            background: #ff9800;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* BUTTON */
+        button {
+            background: #4CAF50;
+            color: black;
+            border: none;
+            padding: 25px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <img src="logo.png" class="logo">
+
+        <div class="title">
+            <h1>Madhu Children's Hospital</h1>
+            <p>Cumbum Road, Markapuram</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#doctors">Doctors</a>
+        <a href="#services">Services</a>
+        <a href="#appointment">Appointments</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Welcome to Our Hospital</h1>
+        <p>We care for your little ones with love & expertise. Your child’s health and happiness are our top priority.
+            At the heart of our children’s hospital is a simple, unwavering promise: no child should ever face illness
+            alone.
+            Here, medicine is practiced with tenderness, expertise is matched with empathy, and every room, every
+            hallway,
+            every interaction is shaped by one guiding belief—that healing happens when the whole child is seen, heard,
+            and cherished.
+            We walk alongside families through uncertain days, answer quiet fears with honest comfort, and celebrate
+            every small victory as the milestone it is.
+            This is more than a place of treatment; it’s a sanctuary where brave little hearts are protected, where
+            parents find strength, and where care is always led by love.</p>
+        <button onclick="scrollToCall()">Book Appointment</button>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section">
+        <h2>Our Services</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Pediatrics</h3>
+                <p>Complete child healthcare services.</p>
+            </div>
+            <div class="card">
+                <h3>Vaccination</h3>
+                <p>Safe and timely immunization.</p>
+            </div>
+            <div class="card">
+                <h3>Emergency Care</h3>
+                <p>24/7 emergency support.</p>
+            </div>
+            <div class="card">
+                <h3>NICU</h3>
+                <p>Neonatal Intensive Care Unit for newborn babies with advanced care and monitoring.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOCTORS -->
+    <section id="doctors" class="section">
+        <h2>Our Doctor</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Dr. M. Madhava Rao</h3>
+                <p><strong>MBBS, DCH</strong></p>
+                <p>Senior Pediatrician</p>
+                <p>Serving children with care and expertise for over <strong>25 years</strong>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- APPOINTMENT -->
+    <section id="appointment" class="section">
+        <h2><b>Book Appointment</b></h2>
+        <div class="call-box">
+            <h3>Call Us</h3>
+            <p><strong>📞  08596 226461</strong></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Madhu Children's Hospital</p>
+    </footer>
+
+    <script>
+        function scrollToCall() {
+            document.getElementById('appointment').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+</body>
+
+</html>
